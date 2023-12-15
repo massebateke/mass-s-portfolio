@@ -1,0 +1,286 @@
+body{
+    background-image:url(img/backkk.png);
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/*-------------HEADER--------------*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;/* longeur de la barre*/
+    padding: 40px 30px; /* rajout padding haut et droit*/
+    backdrop-filter: blur(50px);
+    display: flex;/*en gros ca met tout les elements de header sur la meme ligne*/
+    justify-content: space-between;/*separation entre logo et navbar*/
+    align-items: center;
+    z-index: 100;
+}
+
+/* .header.sticky{
+
+} */
+
+.logo{
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a{
+    margin-left:30px;
+    margin-right: 50px; 
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    transition: .3s ;/*lie au navbar hover, temps de reaction avant*/
+}
+
+.navbar a:hover{
+    color: #345678; /*lorsque on hover les a*/
+}
+
+/*----------DESCRIPTION SECTION HOME------------*/
+
+.acceuil{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding:0 10%;
+}
+
+.descriptionAcceuil h1{
+    position: relative ; /* dispaly = flex ??*/
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.descriptionAcceuil h3{
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    color: #345678;
+}
+
+.descriptionAcceuil p{
+    position: relative;
+    font-size: 25px;
+    width: 45rem;
+}
+
+.btn{
+    display:inline-flex;
+    margin-right: 10px ;
+    border: 1px solid #000;
+    width: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 1rem;
+    color: black;
+}
+
+.btn-reseaux{ /*Logos positionnement*/
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-reseaux a { /*encadrement logo*/
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border:1px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden; /*de base carre mais grace a ca la transfo est ronde*/
+    transition: .5s;
+}
+
+.btn-reseaux a:hover{
+    color: #345678;
+}
+
+/*----------A PROPOS DE MOI SECTION------------*/
+
+img{
+    width: 22rem;
+    height: 31rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.aboutMee{
+    height: 100vh;
+    display: flex;
+    /* align-items: flex-start; */
+    padding:0 10%;
+    margin-right: 3rem;
+}
+
+.aboutMe h3{
+    position: relative ; /* dispaly = flex ??*/
+    font-size: 56px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding:0 10%;
+}
+
+.about-contenu p{
+    position: relative;
+    font-size: 25px;
+    width: 45rem;
+    padding-left: 2rem;
+}
+
+/*----------MES PROJETS SECTION------------*/
+
+.projets-titre h3{
+    position: relative ; /* dispaly = flex ??*/
+    font-size: 56px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding:0 10%;
+}
+
+.projets{
+    display: flex;
+    flex-wrap: wrap;/*passer a la ligne si les elements ne passe pas*/
+    padding:0 10%;
+}
+
+.projet{
+    margin-right: 2rem;
+    max-width: 270px;/* en gros le texte ne peux pas depasser les 195*/
+}
+
+.projet a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+
+.projet p.description{
+    font-size: 1.2rem;
+}
+
+.projet p.date{
+    font-size: 0.9rem;
+}
+
+/*----------CONTACTEZ MOI SECTION------------*/
+
+.contact-titre h3{
+    position: relative ; /* dispaly = flex ??*/
+    font-size: 56px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding:0 10%;
+}
+
+.champ-input{
+    padding:0 10%;
+}
+
+label{
+    position: relative;
+    font-size: 25px;
+    width: 45rem;
+}
+
+input{
+    height: 2rem;
+    width: 25rem;
+    border-radius: 0.3rem;
+    color: #000;
+    background-color: transparent;
+}
+
+textarea{
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+}
+
+.submit{
+    height: 2rem;
+    width: 5rem;
+}
+
+
+/*-------------FOOTER--------------*/
+
+.footer{
+    backdrop-filter: blur(50px);
+    padding:0 10% ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+/*-------------RESPONSIVE--------------*/
+
+@media (max-width: 845px){
+
+    h1{
+        width: 35rem;
+    }
+    
+    .descriptionAcceuil p{
+        width: 30rem;
+        font-size: 20px;
+    }
+
+    img{
+        height: 16rem;
+        width: 12rem;
+        border-radius: 10rem;
+    }
+
+    .about-contenu p{
+        position: relative;
+        font-size: 15px;
+        width: 21rem;
+        padding-left: 2rem;
+    }
+
+    .contact{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .navbar-project{
+        display: none;
+    }
+    .about-img{
+        display: none;
+    }
+
+}
+
+@media (max-width: 482px){
+    .mesprojets{
+        display: none;
+    }
+   
+}
