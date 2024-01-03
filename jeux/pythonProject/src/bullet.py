@@ -1,7 +1,6 @@
 import pygame
 import math
 
-
 #definir la classe qui va gérer le projectile de notre joueur
 class Playerbullet(pygame.sprite.Sprite):
 

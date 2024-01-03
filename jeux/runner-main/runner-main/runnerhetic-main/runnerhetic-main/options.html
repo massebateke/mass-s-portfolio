@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>RUNNER - OPTIONS</title>
+</head>
+<style>
+    body{
+        background: rgba(255, 255, 255, 0.15)url("images/map_prairie.png");
+        background-size: 1440px 1000px;
+        background-blend-mode: color;  
+    }
+</style>
+<body>
+	<form>
+        <nav>
+            <a href="index.html"><input class="button-menu" id="button-retour" type="button" value="RETOUR AU MENU"></a> <br>
+        </nav>
+
+        <h1>Options</h1>
+        
+            <div class="box">
+            
+                <div class="difficulte">
+
+                   <p class="choix-option">Difficultés</p> <br>
+                   <p class="choix-option">Sauter</p> <br>
+                   <p class="choix-option">S'accroupir</p> <br>
+
+                </div>
+
+                <div class="touche">
+
+                    <div class="container">
+                        <span class="next" onclick="nextLevel()" ></span>
+                        <span class="prev" onclick="previousLevel()"></span>
+                        <div class="choix"></div>
+                    </div>
+                    
+                    <div class="configTouche">
+                        <div id="toucheSaut" onclick="changeKeySaut()"> - </div> <br>
+                    
+                        <div id="toucheAccroupi" onclick="changeKeyAccroupi()" ondblclick="closeEvent()"> - </div> <br>
+                    </div>
+                </div>            
+            </div>
+    </form>
+    <script type="text/javascript">
+
+        let choixLevel = 0 ;
+        
+        let view = ["Découverte", "Normal", "Perfectionnement", "Expertise", "Maitrise"];
+
+        document.querySelector(".choix").innerText = view[choixLevel]
+       
+        function nextLevel(){
+            if(choixLevel >= view.length-1){
+                console.log("plus de niveau")
+            } else {
+                choixLevel += 1
+                document.querySelector(".choix").innerText = view[choixLevel]
+            }
+        }
+
+        function previousLevel(){
+            if(choixLevel == 0){
+                console.log("vous êtes au premier choix")
+            } else {
+                choixLevel -= 1
+                document.querySelector(".choix").innerText = view[choixLevel]
+            }
+        }     
+        var keyUp = "a";   
+        function changeKeySaut(){
+            var f = (e) =>{
+            document.getElementById("toucheSaut").innerHTML = `<span>${e.key}</span>`;
+            window.removeEventListener("keydown" , f);
+            console.log("touche up :", e.key)
+            keyUp = e.key
+            console.log("deuxieme log up :",keyUp)
+            sessionStorage.setItem('keyUp', keyUp);
+            };
+            window.addEventListener("keydown", f);
+        }
+        var keyDown = "q";
+        function changeKeyAccroupi(){
+            var a = (e) =>{
+            document.getElementById("toucheAccroupi").innerHTML = `<span>${e.key}</span>`;
+            window.removeEventListener("keydown" , a);
+            console.log("touche down :", e.key)
+            keyDown = e.key
+            console.log("deuxieme log sneak :",keyDown)
+            sessionStorage.setItem('keyDown', keyDown);
+            };
+            window.addEventListener("keydown", a);
+        }
+            
+    </script>
+</body>
+</html>
