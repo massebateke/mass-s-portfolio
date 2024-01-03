@@ -163,7 +163,7 @@ img{
 
 .projet{
     margin-right: 2rem;
-    max-width: 270px;/* en gros le texte ne peux pas depasser les 195*/
+    max-width: 350px;/* en gros le texte ne peux pas depasser les 350*/
 }
 
 .projet a{
@@ -218,9 +218,6 @@ img{
         padding-left: 2rem;
     }
 
-    .contact{
-        display: none;
-    }
 }
 
 @media (max-width: 600px){
