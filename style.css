@@ -58,11 +58,11 @@ body{
     font-family: 'Bebas Neue', sans-serif;
     position: relative ; /* dispaly = flex ??*/
     font-size: 56px;
-    font-weight: 700;
 }
 
 .descriptionAcceuil h3{
     font-family: 'Oswald', sans-serif;
+    font-size: 56px;
     position: relative;
     color: #345678;
 }
