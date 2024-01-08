@@ -63,6 +63,7 @@ body{
 .descriptionAcceuil h3{
     font-family: 'Oswald', sans-serif;
     font-size: 35px;
+    font-weight: 2px;
     position: relative;
     color: #345678;
 }
@@ -172,9 +173,9 @@ img{
 }
 
 .projet a{
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
-    font-weight: 700;
     color: #000;
 }
 
