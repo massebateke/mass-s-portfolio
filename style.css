@@ -37,7 +37,6 @@ body{
     margin-right: 50px; 
     font-size: 18px;
     text-decoration: none;
-    font-weight: 600;
     color: black;
     transition: .3s ;/*lie au navbar hover, temps de reaction avant*/
 }
@@ -58,12 +57,12 @@ body{
 .descriptionAcceuil h1{
     font-family: 'Bebas Neue', sans-serif;
     position: relative ; /* dispaly = flex ??*/
-    font-size: 35px;
+    font-size: 56px;
 }
 
 .descriptionAcceuil h3{
     font-family: 'Oswald', sans-serif;
-    font-size: 56px;
+    font-size: 35px;
     position: relative;
     color: #345678;
 }
