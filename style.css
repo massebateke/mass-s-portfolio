@@ -185,9 +185,13 @@ img{
 }
 
 .projet p.date{
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
+  .fleche-texte{
+    display: flex;
+    gap: 4px;
+  }
 /*-------------FOOTER--------------*/
 
 .footer{
