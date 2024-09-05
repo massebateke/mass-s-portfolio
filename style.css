@@ -4,8 +4,8 @@
 
 
 body{
-    background-image:url(img/background.png);
-    width: 100%;
+    background-image:url(img/blur.png);
+    background-size: 3000px;
     background-repeat: no-repeat;
 }
 
