@@ -3,8 +3,9 @@
 
 
 
-body{
+body {
     background-image:url(img/blur.png);
+    /* width: 100%; */
     background-size: 3000px;
     background-repeat: no-repeat;
 }
@@ -74,18 +75,6 @@ body{
     width: 45rem;
 }
 
-/* .btn{
-    display:inline-flex;
-    margin-right: 10px ;
-    border: 1px solid #000;
-    width: 200px;
-    padding: 15px;
-    border-radius: 12px;
-    text-decoration: none;
-    justify-content: center;
-    font-size: 1rem;
-    color: black;
-} */
 
 .btn-reseaux{ /*Logos positionnement*/
     position: absolute;
@@ -120,10 +109,12 @@ body{
 /*----------A PROPOS DE MOI SECTION------------*/
 
 img{
-    width: 22rem;
+    width: 15rem;
     height: 31rem;
     display: flex;
     align-items: flex-start;
+    bottom: 10rem;
+    position: relative;
 }
 
 .aboutMee{
@@ -169,8 +160,8 @@ img{
 }
 
 .projet{
-    margin-right: 4rem;
-    max-width: 330px;/* en gros le texte ne peux pas depasser les 350*/
+    margin-right: 2rem;
+    max-width: 350px;/* en gros le texte ne peux pas depasser les 350*/
 }
 
 .projet a{
@@ -199,13 +190,14 @@ img{
     padding:0 10% ;
     display: flex;
     align-items: flex-end;
+    width: 100%;
     justify-content: space-between;
 }
 
 
 /*-------------RESPONSIVE--------------*/
 
-@media (max-width: 845px){
+@media screen and (min-width: 600px) and (max-width: 844px){
 
     h1{
         width: 35rem;
@@ -216,10 +208,39 @@ img{
         font-size: 20px;
     }
 
+    .descriptionAcceuil h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        position: relative;
+        font-size: 45px;
+    }
+
     img{
-        height: 16rem;
+        height: 20rem;
         width: 12rem;
-        border-radius: 10rem;
+        bottom: 5em;
+    }
+
+    .about-contenu p{
+        position: relative;
+        font-size: 15px;
+        width: 30rem;
+        padding-left: 2rem;
+    }
+
+    .projets {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2em;
+        left: 4em;
+        position: relative;
+    }
+
+}
+
+
+@media screen and (min-width: 483px) and (max-width: 599px){
+    .mesprojets{
+        display: none;
     }
 
     .about-contenu p{
@@ -228,22 +249,10 @@ img{
         width: 21rem;
         padding-left: 2rem;
     }
-
-}
-
-@media (max-width: 600px){
-    .navbar-project{
-        display: none;
-    }
-    .about-img{
-        display: none;
-    }
-
-}
-
-@media (max-width: 482px){
-    .mesprojets{
-        display: none;
+ 
+    .projet {
+        margin-right: 2rem;
+        max-width: 890px;
     }
    
 }
