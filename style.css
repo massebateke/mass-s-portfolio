@@ -239,9 +239,9 @@ img{
 
 
 @media screen and (min-width: 483px) and (max-width: 599px){
-    .mesprojets{
+    /* .mesprojets{
         display: none;
-    }
+    } */
 
     .about-contenu p{
         position: relative;
@@ -254,5 +254,12 @@ img{
         margin-right: 2rem;
         max-width: 890px;
     }
+    .projet p {
+    font-size: 2rem;
+    }
    
+    #ok{
+        max-width: 890px;
+
+    }
 }
